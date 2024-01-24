@@ -1,5 +1,5 @@
 body{
-    
+
 }
 
 .container{
@@ -184,6 +184,55 @@ nav{
 }
 .courses_details{
     color: #00AEEF;
-    
+}
+.partners{
+    background-color: rgb(43, 43, 43);
+    position: relative;
+    padding-bottom: 36px;
+}
+.partners_h3{
+    font-size: 24px;
+    color: rgb(244, 244, 244);
+    letter-spacing: 0em;
+    padding: 34px 0px 31px calc((100% - 980px) * 0.5);
+}
+#chevron_left{
+    width: 30px;
+    height: 30px;
+}
+#chevron_right{
+    transform: scaleX(-1);
+    width: 30px;
+    height: 30px;
+}
+.slideshow{
+    height: 224px;
+    padding-left: 100px;
+    display: flex;
+    align-items: center;
+    column-gap: 100px;
 
+}
+#slideshow_img{
+    display: flex;
+    align-items: center;
+    column-gap: 100px;
+}
+.dot_ul{
+    position: absolute;
+    
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    bottom: 60px;
+    left: 50%;
+   
+}
+.dot{
+    width: 6px;
+    height: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+    border-radius: 50%;
 }
