@@ -98,3 +98,28 @@ nav{
     left: 18%;
 
 }
+#information{
+    background-color: rgb(43, 43, 43);
+    padding: 56px 0 56px 18%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    
+    
+}
+#info_h2{
+    width: 985px;
+    font-size:28px;
+    line-height:1.6em;
+    color:#F4F4F4;
+    letter-spacing: 0em;
+    
+}
+#more{
+    font-size: 28px;
+    color: rgb(0, 163, 224);
+    transform: color,0.4,ease,0s;
+}
+#more:hover{
+    color: rgb(170, 170, 170);
+}
