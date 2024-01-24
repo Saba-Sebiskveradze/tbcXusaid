@@ -117,9 +117,73 @@ nav{
 }
 #more{
     font-size: 28px;
-    color: rgb(0, 163, 224);
+    color: #00AEF3;
     transform: color,0.4,ease,0s;
 }
 #more:hover{
     color: rgb(170, 170, 170);
+}
+/* courses */
+#courses_h6{
+    font-size: 24px;
+    color:#DBDBDB;
+    
+    
+}
+#courses{
+    background-color: rgb(22, 22, 22);;
+    display: flex;
+    flex-direction: column;
+    row-gap: 67px;
+    align-items:self-start;
+    padding: 34px 0 34px calc((100% - 980px) * 0.5);
+    
+}
+.cards_list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12.5px 25px;
+}
+.cards{
+    width: 300px;
+    height: 414px;
+    border-radius: 6px;
+    border: 1px solid rgb(85, 85, 85);
+}
+.courses_img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 34px;
+
+}
+.cards_h5{
+    color:#F4F4F4;
+    font-size:18px;
+    margin-bottom: 25px;
+    padding-left: 21px;
+}
+.details{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 21px;
+    margin-top: 127px;
+
+    
+}
+.vector{
+    fill: #00AEEF;
+}
+.cards_p{
+    font-size:14px;
+    color: rgb(244, 244, 244);
+    letter-spacing: 0em;
+    padding-left: 21px;
+
+}
+.courses_details{
+    color: #00AEEF;
+    
+
 }
