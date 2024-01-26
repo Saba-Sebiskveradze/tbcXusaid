@@ -236,3 +236,7 @@ nav{
     background-color: rgb(230, 230, 230);
     border-radius: 50%;
 }
+#first_slider, #second_slider, #third_slider{
+    width: 240px;
+    height: 80px;
+}
