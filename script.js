@@ -8,27 +8,27 @@ let dot2 = document.querySelector('.dot2')
 let dot3 = document.querySelector('.dot3')
 
 let position = 0;
-dot1.addEventListener('click', () =>{
+dot1.addEventListener('click', () => {
     firstPage();
-})  
-dot2.addEventListener('click', () =>{
+})
+dot2.addEventListener('click', () => {
     secondPage();
 })
-dot3.addEventListener('click', () =>{
+dot3.addEventListener('click', () => {
     thirdPage();
 })
-chevronRight.addEventListener('click', () =>{
+chevronRight.addEventListener('click', () => {
     position += 1
-    if(position == 3){
+    if (position == 3) {
         position = 0
     }
     slide(position)
 
     console.log(position);
 })
-chevronLeft.addEventListener('click', () =>{
+chevronLeft.addEventListener('click', () => {
     position -= 1
-    if(position == -1){
+    if (position == -1) {
         position = 2
     }
     slide(position)
@@ -38,44 +38,94 @@ chevronLeft.addEventListener('click', () =>{
 function autoPlay(delay = 3000) {
     return setInterval(() => {
         position += 1
-        if(position == 3){
+        if (position == 3) {
             position = 0
         }
         slide(position)
     }, delay)
-  }
+}
 autoPlay();
-function slide(position){
-    if(position == 1){
+function slide(position) {
+    if (position == 1) {
         secondPage();
-    }else if(position == 2){
+    } else if (position == 2) {
         thirdPage()
-    }else if(position == 0){
-       firstPage();
+    } else if (position == 0) {
+        firstPage();
 
     }
-    
+
 }
 
-function firstPage(){
+function firstPage() {
     firstImg.style.visibility = "";
-        thirdImg.style.visibility = "";
+    thirdImg.style.visibility = "";
 
-        firstImg.src = 'https://static.wixstatic.com/media/93e8a3_a356bb7d201f4f47870683655e9e4120~mv2.png/v1/fill/w_308,h_93,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%204_2x_edited.png'
-        secondImg.src = 'https://static.wixstatic.com/media/93e8a3_eaf33552ffd5463e96a5f776dda00111~mv2.png/v1/fill/w_301,h_100,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/White%20horiz.png'
-        thirdImg.src = 'https://static.wixstatic.com/media/93e8a3_ae4ade72135b4c7eaa531290232fe5aa~mv2.png/v1/fill/w_313,h_56,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/93e8a3_ae4ade72135b4c7eaa531290232fe5aa~mv2.png'
+    firstImg.src = 'https://static.wixstatic.com/media/93e8a3_a356bb7d201f4f47870683655e9e4120~mv2.png/v1/fill/w_308,h_93,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%204_2x_edited.png'
+    secondImg.src = 'https://static.wixstatic.com/media/93e8a3_eaf33552ffd5463e96a5f776dda00111~mv2.png/v1/fill/w_301,h_100,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/White%20horiz.png'
+    thirdImg.src = 'https://static.wixstatic.com/media/93e8a3_ae4ade72135b4c7eaa531290232fe5aa~mv2.png/v1/fill/w_313,h_56,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/93e8a3_ae4ade72135b4c7eaa531290232fe5aa~mv2.png'
 }
-function secondPage(){
+function secondPage() {
     firstImg.style.visibility = "";
     thirdImg.style.visibility = "";
     firstImg.src = 'https://static.wixstatic.com/media/93e8a3_b595f31239344928802dd7135813e17c~mv2.png/v1/fill/w_360,h_104,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Tegeta%20logo%20geo.png'
     secondImg.src = 'https://static.wixstatic.com/media/93e8a3_aca86c1c067d4f8585c3c2cb1b0a0178~mv2.png/v1/fill/w_262,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/93e8a3_aca86c1c067d4f8585c3c2cb1b0a0178~mv2.png'
     thirdImg.src = 'https://static.wixstatic.com/media/93e8a3_b6ed8fb2602e4670bc83d1fd4a7d9283~mv2.png/v1/fill/w_440,h_134,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MicrosoftTeams-image%20(9).png'
 }
-function thirdPage(){
+function thirdPage() {
     firstImg.src = ''
     firstImg.style.visibility = "hidden";
     secondImg.src = 'https://static.wixstatic.com/media/93e8a3_ef7860c1a2854f1c8fc20f867ffa30ab~mv2.png/v1/fill/w_284,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/UFC%20GEO%20PNG_edited.png'
     thirdImg.src = ''
     thirdImg.style.visibility = "hidden";
 }
+
+let firstQuestion = document.querySelector('.first_question')
+let secondQuestion = document.querySelector('.second_question')
+let thirdQuestion = document.querySelector('.third_question')
+let firstAnswer = document.querySelector('#register_info')
+let secondAnswer = document.querySelector('.second_question_p')
+let thirdAnswer = document.querySelector('.third_question_p')
+let firstClicked = true;
+let secondClicked = true;
+let thirdClicked = true;
+
+
+firstQuestion.addEventListener('click', () => {
+    if (firstClicked == true) {
+        firstAnswer.style.display = 'flex';
+        secondAnswer.style.display = 'none';
+        thirdAnswer.style.display = 'none';
+        firstClicked = false;
+    } else {
+        firstAnswer.style.display = 'none';
+        
+        firstClicked = true
+    }
+
+})
+
+
+secondQuestion.addEventListener('click', () => {
+    if (secondClicked == true) {
+        firstAnswer.style.display = 'none';
+        secondAnswer.style.display = 'flex';
+        thirdAnswer.style.display = 'none';
+        secondClicked = false;
+    } else {
+        secondAnswer.style.display = 'none';
+        
+        secondClicked = true
+    }
+})
+thirdQuestion.addEventListener('click', () => {
+    if (thirdClicked == true) {
+        firstAnswer.style.display = 'none';
+        secondAnswer.style.display = 'none';
+        thirdAnswer.style.display = 'flex';
+        thirdClicked = false;
+    } else {
+        thirdAnswer.style.display = 'none';
+        thirdClicked = true
+    }
+})

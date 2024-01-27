@@ -51,9 +51,7 @@ a {
     cursor: pointer;
     color: #000000;
 }
-* {
-    box-sizing: border-box;
-}
+
 button{
 	background: none;
 	border: none;
