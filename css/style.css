@@ -10,7 +10,11 @@ body {}
 header {
     background-color: #1A1E1F;
     height: 84px;
-    position: static;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: 1;
     display: grid;
     height: auto;
     width: 100%;
@@ -75,6 +79,8 @@ nav {
 }
 
 .first_image {
+    padding-top: 84px;
+
     position: relative;
     height: 352px;
 }
@@ -86,12 +92,14 @@ nav {
 }
 
 .tbc_h3 {
+    
+
     position: absolute;
     font-size: 42px;
     line-height: 1.6em;
     color: rgb(244, 244, 244);
     letter-spacing: 0em;
-    top: 96px;
+    top: 160px;
     left: 18%;
 }
 
@@ -101,7 +109,7 @@ nav {
     color: rgb(244, 244, 244);
     letter-spacing: 0em;
     font-size: 34px;
-    top: 176px;
+    top: 256px;
     left: 18%;
 
 }
@@ -112,6 +120,7 @@ nav {
     display: flex;
     flex-direction: column;
     row-gap: 30px;
+
 
 
 }
@@ -354,5 +363,51 @@ nav {
     padding-bottom: 30px;
     display: none;
 
+
+}
+footer{
+    background-color: rgb(26, 30, 31);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+#footer_main_div{
+    width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_p{
+    font-size: 14px;
+    color: rgb(244, 244, 244);
+}
+#footer_img{
+    width: 100px;
+    height: 30px;
+}
+.footer_div1{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.footer_img2{
+    width: 40px;
+    height: 40px;
+}
+#message{
+    width: 160px;
+    height: 40px;
+    background-color: #00AEEF;
+    color: rgb(244, 244, 244);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer_div2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
 
 }
